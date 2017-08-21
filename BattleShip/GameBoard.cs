@@ -8,11 +8,14 @@ namespace BattleShip
 {
     class GameBoard
         {
+
         public List<List<GameBoardSpace>> Rows;
+        private int gameSpaceCounter;
 
 
         public GameBoard()
         {
+            gameSpaceCounter = 0;
             GenerateBoard();
         }
 
@@ -24,8 +27,10 @@ namespace BattleShip
                 List<GameBoardSpace> column = new List<GameBoardSpace>();
                 for (int j = 0; j < 10; j++)
                 {
-                    GameBoardSpace space = new GameBoardSpace();
+                    gameSpaceCounter++;
+                    GameBoardSpace space = new GameBoardSpace(gameSpaceCounter);
                     column.Add(space);
+                    
                 }
                 Rows.Add(column);
             }
