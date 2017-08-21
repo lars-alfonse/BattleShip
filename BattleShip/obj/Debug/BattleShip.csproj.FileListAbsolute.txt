@@ -1,1 +1,6 @@
 D:\Documents\DevCodeCamp\BattleShip\BattleShip\bin\Debug\BattleShip.exe.config
+D:\Documents\DevCodeCamp\BattleShip\BattleShip\bin\Debug\BattleShip.exe
+D:\Documents\DevCodeCamp\BattleShip\BattleShip\bin\Debug\BattleShip.pdb
+D:\Documents\DevCodeCamp\BattleShip\BattleShip\obj\Debug\BattleShip.csprojResolveAssemblyReference.cache
+D:\Documents\DevCodeCamp\BattleShip\BattleShip\obj\Debug\BattleShip.exe
+D:\Documents\DevCodeCamp\BattleShip\BattleShip\obj\Debug\BattleShip.pdb

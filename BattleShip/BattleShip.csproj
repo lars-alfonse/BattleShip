@@ -47,6 +47,7 @@
     <Compile Include="BattleShip.cs" />
     <Compile Include="Cruiser.cs" />
     <Compile Include="Destroyer.cs" />
+    <Compile Include="Eraser.cs" />
     <Compile Include="GameBoard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

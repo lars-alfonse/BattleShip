@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace BattleShip
 {
-    class Program
+    static public class Eraser
     {
-        static void Main(string[] args)
+        static void ClearBoard()
         {
-            GameBoard gameboard = new GameBoard();
-            gameboard.DisplayBoard();
+            Console.Clear();
         }
     }
 }
