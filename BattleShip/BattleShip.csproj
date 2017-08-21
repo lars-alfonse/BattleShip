@@ -49,11 +49,13 @@
     <Compile Include="Destroyer.cs" />
     <Compile Include="Eraser.cs" />
     <Compile Include="GameBoard.cs" />
+    <Compile Include="GameBoardSpace.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ship.cs" />
     <Compile Include="ShipPiece.cs" />
     <Compile Include="Submarine.cs" />
+    <Compile Include="testGameboard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
