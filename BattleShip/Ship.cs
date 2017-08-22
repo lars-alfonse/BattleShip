@@ -11,5 +11,12 @@ namespace BattleShip
         protected int length;
         public List<ShipPiece> parts;
         public bool isSunk;
+        public int Length
+        {
+            get
+            {
+                return length;
+            }
+        }
     }
 }

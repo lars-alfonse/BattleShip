@@ -26,6 +26,13 @@ namespace BattleShip
                 display = value;
             }
         }
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
         public bool IsOccupied
         {
             get

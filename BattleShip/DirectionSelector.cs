@@ -40,5 +40,11 @@ namespace BattleShip
                 return;
             }
         }
+        public void RunInput()
+        {
+            GetUserInput();
+            TranslateInput();
+        }
+
     }
 }
