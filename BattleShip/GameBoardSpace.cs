@@ -10,8 +10,10 @@ namespace BattleShip
     {
         private bool isOccupied;
         private bool isHit;
+        private bool wasShotAt;
         private string display;
         private string name;
+        public ShipPiece shipPiece;
 
         public string Display
         {
@@ -19,17 +21,38 @@ namespace BattleShip
             {
                 return display;
             }
+            set
+            {
+                display = value;
+            }
+        }
+        public bool IsOccupied
+        {
+            get
+            {
+                return isOccupied;
+            }
+            set
+            {
+                isOccupied = value;
+            }
         }
 
 
         public GameBoardSpace()
         {
             display = "|__|";
+            isHit = false;
+            isOccupied = false;
+            wasShotAt = false;
         }
         public GameBoardSpace(int counter)
         {
             GetName(counter);
-            display = $"|{name}|";
+            display = $"|__|";
+            isHit = false;
+            isOccupied = false;
+            wasShotAt = false;
         }
         private void GetName(int counter)
         {

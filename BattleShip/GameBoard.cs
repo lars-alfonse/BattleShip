@@ -11,12 +11,14 @@ namespace BattleShip
 
         public List<List<GameBoardSpace>> Rows;
         private int gameSpaceCounter;
+        private int boardDimensions;
 
 
         public GameBoard()
         {
             gameSpaceCounter = 0;
             GenerateBoard();
+            boardDimensions = 10;
         }
 
         private void GenerateBoard()
@@ -50,7 +52,10 @@ namespace BattleShip
                 Console.Write(Environment.NewLine + Environment.NewLine);
             }
             Console.ReadLine();
-
+        }
+        private bool CheckIfOccupied(int ycoordinate, int xcoordinate)
+        {
+            return Rows[ycoordinate][xcoordinate].IsOccupied;
         }
     }
 }

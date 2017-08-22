@@ -12,6 +12,8 @@ namespace BattleShip
         {
             GameBoard gameboard = new GameBoard();
             gameboard.DisplayBoard();
+            CoordinateSelector selector = new CoordinateSelector();
+            selector.RunInput();
         }
     }
 }

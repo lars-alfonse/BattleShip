@@ -8,5 +8,8 @@ namespace BattleShip
 {
     abstract class Ship
     {
+        protected int length;
+        public List<ShipPiece> parts;
+        public bool isSunk;
     }
 }
