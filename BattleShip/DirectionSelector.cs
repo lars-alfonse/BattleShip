@@ -8,7 +8,6 @@ namespace BattleShip
 {
     class DirectionSelector : UserInterface
     {
-        public string direction;
         protected override void GetUserInput()
         {
             Console.WriteLine("Enter Direction You Would Like to Place Your Ship \n(up, down, left, right");

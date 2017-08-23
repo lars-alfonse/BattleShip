@@ -8,5 +8,6 @@ namespace BattleShip
 {
     class ShipPiece
     {
+        public string display;
     }
 }

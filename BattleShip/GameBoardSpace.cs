@@ -44,8 +44,28 @@ namespace BattleShip
                 isOccupied = value;
             }
         }
-
-
+        public bool IsHit
+        {
+            get
+            {
+                return isHit;
+            }
+            set
+            {
+                isHit = value;
+            }
+        }
+        public bool WasShotAt
+        {
+            get
+            {
+                return wasShotAt;
+            }
+            set
+            {
+                wasShotAt = value;
+            }
+        }
         public GameBoardSpace()
         {
             display = "|__|";
@@ -59,6 +79,14 @@ namespace BattleShip
             display = $"|__|";
             isHit = false;
             isOccupied = false;
+            wasShotAt = false;
+        }
+        public GameBoardSpace(GameBoardSpace space)
+        {
+            name = space.name;
+            display = $"|__|";
+            isHit = false;
+            isOccupied = space.IsOccupied;
             wasShotAt = false;
         }
         private void GetName(int counter)

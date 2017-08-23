@@ -14,18 +14,29 @@ namespace BattleShip
 
         public void PlaceShip(Ship ship)
         {
+
             coordinateSelector.RunInput();
             directionSelector.RunInput();
             GetShipPlacement(ship);
             CheckForShipCollision(ship);
+            InsertShip(ship);
 
+        }
+        private void InsertShip(Ship ship)
+        {
+            for (int i = 0; i < ship.Length; i++)
+            {
+                shipPlacement[i].shipPiece = ship.parts[i];
+                shipPlacement[i].IsOccupied = true;
+                shipPlacement[i].Display = ship.parts[i].display;
+            }
         }
         private void GetShipPlacement(Ship ship)
         {
             shipPlacement = new List<GameBoardSpace>();
             try
             {
-                switch (directionSelector.direction)
+                switch (directionSelector.UserInput)
                 {
                     case "up":
                         for (int i = 0; i < ship.Length; i++)

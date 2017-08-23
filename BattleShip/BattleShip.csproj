@@ -57,6 +57,7 @@
     <Compile Include="Ship.cs" />
     <Compile Include="ShipBoard.cs" />
     <Compile Include="ShipPiece.cs" />
+    <Compile Include="StrikeBoard.cs" />
     <Compile Include="Submarine.cs" />
     <Compile Include="testGameboard.cs" />
     <Compile Include="UserInterface.cs" />
