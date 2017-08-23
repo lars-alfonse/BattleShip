@@ -37,6 +37,22 @@ namespace BattleShip
                 Rows.Add(column);
             }
         }
+        protected void GenerateBoard(GameBoard gameboard)
+        {
+            Rows = new List<List<GameBoardSpace>>();
+            for (int i = 0; i < 10; i++)
+            {
+                List<GameBoardSpace> column = new List<GameBoardSpace>();
+                for (int j = 0; j < 10; j++)
+                {
+                    gameSpaceCounter++;
+                    GameBoardSpace space = new GameBoardSpace(gameboard.Rows[i][j]);
+                    column.Add(space);
+
+                }
+                Rows.Add(column);
+            }
+        }
         public void DisplayBoard()
         {
             Console.WriteLine("   1    2    3    4    5    6    7    8    9    10");

@@ -12,12 +12,19 @@ namespace BattleShip
         {
             Submarine submarine = new Submarine();
             ShipBoard gameboard = new ShipBoard();
+           
             gameboard.DisplayBoard();
             gameboard.PlaceShip(submarine);
+            gameboard.DisplayBoard();
+            StrikeBoard strikeboard = new StrikeBoard(gameboard);
+            strikeboard.DisplayBoard();
+            strikeboard.ShootAtOpponent();
+            strikeboard.ShootAtOpponent();
+            strikeboard.DisplayBoard();
             gameboard.DisplayBoard();
             Console.ReadLine();
-            gameboard.PlaceShip(submarine);
-            gameboard.DisplayBoard();
+
+
 
         }
     }

@@ -12,17 +12,10 @@ namespace BattleShip
         GameBoard opponentBoard;
         public StrikeBoard(GameBoard gameboard)
         {
-           opponentBoard = gameboard;
-           for (int i = 0; i <  gameboard.Rows.Count; i++)
-            {
-                Rows[i] = new List<GameBoardSpace>();
-                for (int j = 0; j > gameboard.Rows[i].Count; j++)
-                {
-                    Rows[i].Add(new GameBoardSpace(gameboard.Rows[i][j]));
-                }
-            }
+            opponentBoard = gameboard;
+            GenerateBoard(gameboard);
         }
-        private void ShootAtOpponent()
+        public void ShootAtOpponent()
         {
             coordinateSelector.RunInput();
             if (Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].WasShotAt)
@@ -34,8 +27,8 @@ namespace BattleShip
             else if (Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].IsOccupied)
             {
                 Console.WriteLine("Hit");
-                Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|hit|";
-                opponentBoard.Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|hit|";
+                Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|HT|";
+                opponentBoard.Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|HT|";
                 Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].IsHit = true;
                 opponentBoard.Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].IsHit = true;
                 Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].WasShotAt = true;
@@ -43,8 +36,8 @@ namespace BattleShip
             else
             {
                 Console.WriteLine("Miss");
-                Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|mis|";
-                opponentBoard.Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|mis|";
+                Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|MS|";
+                opponentBoard.Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].Display = "|MS|";
                 Rows[coordinateSelector.ycoordinate][coordinateSelector.xcoordinate].WasShotAt = true;
             }
         }
